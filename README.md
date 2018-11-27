@@ -37,3 +37,5 @@ In the aforementioned **docker run command**, the system properties are customis
 - In this particular example, I am curling New Relic download.newrelic.com website to download the latest copy of the Java Agent and unzipping it under the tomcat directory. There is nothing stopping you from ADD/COPY-ing into the Dockerfile. I still recommend curling vs ADD/COPY-ing so that you can pre-package the agent and enable monitoring-on-the-go by baking the agent into your final container image
 - Full New Relic Agent config details are available on [New Relic Docs!](https://docs.newrelic.com/docs/agents/java-agent/configuration/java-agent-configuration-config-file)
 - The **-p** parameter is for port mapping that will allow users to access the tomcat sample apps on **http://<ip_address>:8888** in this case. You can customise it to any other port available on your host. 
+
+For assistance on either one of the applications, please refer to http://tomcat.apache.org/ and/or https://newrelic.com/support
