@@ -13,7 +13,9 @@ You will require the following two things to get started:
 Once you have the above two sorted, you can proceed with the following:
 
 **STEP 1**. Install Docker on your host - I used the free SMP Debian 4.9.130-2 (2018-10-27) x86_64 GNU/Linux for testing purposes
+
 **STEP 2**. Once Docker is up and running, use the Dockerfile attached in this Github Repo to create a local tomcat image that entails New Relic Java Agent. You may build the container with this command - docker build -t tomcat-newrelic
+
 **STEP 3**. Once the container image is ready, you will need to run it with the following two options:
 
 **#Distributed tracing enabled - substep 3.1:**
