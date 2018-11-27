@@ -1,12 +1,15 @@
-#Docker-tomcat-NewRelic-Java
+**bold**Docker-tomcat-NewRelic-Java
+
+![New Relic](https://pbs.twimg.com/profile_images/925780787122782209/n777ei4f_400x400.jpg)
+
 
 Use this repository to get New Relic Java Agent integrated with a Tomcat Container
 
 NOTE: This is a simple tutorial that entails a Dockerfile and a docker run command to bake New Relic Java Agent into the latest Tomcat (8.0) container.
 
 You will require the following two things to get started:
-1. You will need an official license from New Relic SaaS UI: rpm.newrelic.com/accounts/xxxxxx (If you don't have a New Relic Account, sign up for a trial on https://newrelic.com/signup 
-2. Use the official Tomcat docker image from docker hub: https://hub.docker.com/_/tomcat/
+1. You will need an official license from New Relic SaaS UI: rpm.newrelic.com/accounts/xxxxxx (If you don't have a New Relic Account, sign up for a trial on [New Relic Sign Up Page!](https://newrelic.com/signup) 
+2. Use the official Tomcat docker image - [Docker Hub tomcat!](https://hub.docker.com/_/tomcat/)
 
 Once you have the above two sorted, you can proceed with the following:
 
