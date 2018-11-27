@@ -1,4 +1,4 @@
-**Docker-tomcat-NewRelic-Java
+**Docker-tomcat-NewRelic-Java**
 
 ![New Relic](https://pbs.twimg.com/profile_images/925780787122782209/n777ei4f_400x400.jpg)
 ![Docker](https://cdn-images-1.medium.com/max/1600/1*d-HKujYLR5Q2QED4ybEiPw.png)
