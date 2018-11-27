@@ -16,6 +16,7 @@ LABEL name="tomcat/java-agent" \
 # The user ID - not used in this dockerfile
 
 WORKDIR /usr/local/tomcat/
+
 RUN curl -O "http://download.newrelic.com/newrelic/java-agent/newrelic-agent/current/newrelic-java.zip"
 
 RUN ["apt-get", "install", "unzip"]
