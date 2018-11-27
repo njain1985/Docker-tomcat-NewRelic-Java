@@ -2,7 +2,7 @@
 
 ![New Relic & Docker](https://cms-assets.tutsplus.com/uploads/users/343/posts/24891/preview_image/docker_newrelic3.png)
 
-Use this repository to get New Relic Java Agent integrated with a Tomcat Container
+Use this repository to get New Relic Java Agent integrated with a Tomcat Container or any other Java container for that matter.
 
 NOTE: This is a simple tutorial that entails a Dockerfile and a docker run command to bake New Relic Java Agent into the latest Tomcat (8.0) container.
 
