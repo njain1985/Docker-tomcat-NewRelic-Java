@@ -27,13 +27,13 @@ Once you have the above two sorted, you can proceed with the following:
 *docker run -it -p 8888:8080 -e JAVA_OPTS="-javaagent:/usr/local/tomcat/newrelic/newrelic.jar -Dnewrelic.config.license_key=<unique_newrelic_license_key>-Dnewrelic.config.app_name=Tomcat-base-app2 -Dnewrelic.config.distributed_tracing.enabled=true" tomcat-test2*
 
 **P.S.** 
-Replace the <unique_newrelic_license_key with the license key generated within your New Relic master/sub account, also, you don't need the angle brackets < >
-In the aforementioned docker run command, the system properties are customisable to your needs. 
+Replace the **<unique_newrelic_license_key>** with the license key generated within your New Relic master/sub account, also, you don't need the angle brackets **< >**
+In the aforementioned **docker run command**, the system properties are customisable to your needs. 
 
-- Assign an app_name that makes most sense for your app (A good name = Prod_eCommerce_AWS_API_Backend, A bad name = ASIG-SFFG-Service). This is the microservice name that will appear in New Relic SaaS UI. You must use the same app_name across all the micro-services that serve the same function, this way you would get a clean multi-container (host) view for that particular microservice. 
-- The parameter -Dnewrelic.config.license_key=xxxxxxxxxx is the license key that you can get from New Relic Account Settings page (right-side of the browser) 
-- The parameter -Dnewrelic.config.distributed_tracing.enabled accepts boolean values - true or false which can be used to activate or de-activate distributed tracing (it is recommended to keep this enabled OOTB because its super powerful in squashing code-level and latency related issues quickly, essentially reducing MTTR and providing cross-microservice traces with response time for each node and layer that participates in a transaction call)
-- In addition, you can also pass -b and -bmanagement flag in the docker run command which accepts an ip address value 0.0.0.0
+- Assign an **app_name** that makes most sense for your app (A good name = Prod_eCommerce_AWS_API_Backend, A bad name = ASIG-SFFG-Service). This is the microservice name that will appear in New Relic SaaS UI. You must use the same app_name across all the micro-services that serve the same function, this way you would get a clean multi-container (host) view for that particular microservice. 
+- The parameter **-Dnewrelic.config.license_key=xxxxxxxxxx** is the license key that you can get from New Relic Account Settings page (right-side of the browser) 
+- The parameter **-Dnewrelic.config.distributed_tracing.enabled** accepts boolean values - true or false which can be used to activate or de-activate distributed tracing (it is recommended to keep this enabled OOTB because its super powerful in squashing code-level and latency related issues quickly, essentially reducing MTTR and providing cross-microservice traces with response time for each node and layer that participates in a transaction call)
+- In addition, you can also pass **-b** and **-bmanagement** flag in the docker run command which accepts an ip address value 0.0.0.0
 - In this particular example, I am curling New Relic download.newrelic.com website to download the latest copy of the Java Agent and unzipping it under the tomcat directory. There is nothing stopping you from ADD/COPY-ing into the Dockerfile. I still recommend curling vs ADD/COPY-ing so that you can pre-package the agent and enable monitoring-on-the-go by baking the agent into your final container image
 - Full New Relic Agent config details are available on [New Relic Docs!](https://docs.newrelic.com/docs/agents/java-agent/configuration/java-agent-configuration-config-file)
-- The -p parameter is for port mapping that will allow users to access the tomcat sample apps on http://<ip_address>:8888 in this case. You can customise it to any other port available on your host. 
+- The **-p** parameter is for port mapping that will allow users to access the tomcat sample apps on **http://<ip_address>:8888** in this case. You can customise it to any other port available on your host. 
