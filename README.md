@@ -24,7 +24,7 @@ Once you have the above two sorted, you can proceed with the following:
 
 **#Without distributed tracing - substep 3.2:** 
 
-*docker run -it -p 8888:8080 -e JAVA_OPTS="-javaagent:/usr/local/tomcat/newrelic/newrelic.jar -Dnewrelic.config.license_key=<unique_newrelic_license_key>-Dnewrelic.config.app_name=Tomcat-base-app2 -Dnewrelic.config.distributed_tracing.enabled=true" tomcat-test2*
+*docker run -it -p 8888:8080 -e JAVA_OPTS="-javaagent:/usr/local/tomcat/newrelic/newrelic.jar -Dnewrelic.config.license_key=<unique_newrelic_license_key>-Dnewrelic.config.app_name=Tomcat-base-app2 -Dnewrelic.config.distributed_tracing.enabled=false" tomcat-test2*
 
 **P.S.** 
 Replace the **<unique_newrelic_license_key>** with the license key generated within your New Relic master/sub account, also, you don't need the angle brackets **< >**
